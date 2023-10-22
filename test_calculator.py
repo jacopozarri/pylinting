@@ -1,6 +1,7 @@
 import unittest
 from calculator import Calculator
 
+
 class TestCalculator(unittest.TestCase):
     def setUp(self):
         self.calc = Calculator()
@@ -22,6 +23,7 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(self.calc.divide(5, 2), 2.5)
         with self.assertRaises(ValueError):
             self.calc.divide(1, 0)
+
 
     def test_power(self):
         self.assertEqual(self.calc.power(2, 3), 8)
