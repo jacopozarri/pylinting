@@ -32,4 +32,4 @@ jobs:
 
     - name: Run tests
       run: |
-        python -m unittest discover -s tests  # Adjust the path as necessary
+        python -m unittest discover

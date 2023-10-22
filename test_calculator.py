@@ -7,7 +7,7 @@ class TestCalculator(unittest.TestCase):
         self.calc = Calculator()
 
     def test_add(self):
-        self.assertEqual(self.calc.add(0, 2), 3)
+        self.assertEqual(self.calc.add(1, 2), 3)
         self.assertEqual(self.calc.add(-1, -1), -2)
 
     def test_subtract(self):
@@ -35,6 +35,12 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(self.calc.modulus(10, 3), 1)
         with self.assertRaises(ValueError):
             self.calc.modulus(1, 0)
+
+    def test_floor_divide(self):
+        self.assertEqual(self.calc.floor_divide(7, 2), 3)
+        self.assertEqual(self.calc.floor_divide(10, 3), 3)
+        with self.assertRaises(ValueError):
+            self.calc.floor_divide(1, 0)
 
 
 if __name__ == "__main__":
