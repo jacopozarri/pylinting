@@ -36,6 +36,12 @@ class TestCalculator(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.calc.modulus(1, 0)
 
+    def test_floor_divide(self):
+        self.assertEqual(self.calc.floor_divide(7, 2), 3)
+        self.assertEqual(self.calc.floor_divide(10, 3), 3)
+        with self.assertRaises(ValueError):
+            self.calc.floor_divide(1, 0)
+
 
 if __name__ == "__main__":
     unittest.main()
