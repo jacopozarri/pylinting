@@ -49,6 +49,12 @@ class TestCalculator(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.calc.square_root(-1)
 
+    def test_factorial(self):
+        self.assertEqual(self.calc.factorial(5), 120)
+        self.assertEqual(self.calc.factorial(0), 1)
+        with self.assertRaises(ValueError):
+            self.calc.factorial(-1)
+
 
 if __name__ == "__main__":
     unittest.main()
