@@ -1,13 +1,12 @@
 import unittest
 from calculator import Calculator
 
-
 class TestCalculator(unittest.TestCase):
     def setUp(self):
         self.calc = Calculator()
 
     def test_add(self):
-        self.assertEqual(self.calc.add(0, 2), 3)
+        self.assertEqual(self.calc.add(1, 2), 3)
         self.assertEqual(self.calc.add(-1, -1), -2)
 
     def test_subtract(self):
@@ -24,6 +23,11 @@ class TestCalculator(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.calc.divide(1, 0)
 
+    def test_power(self):
+        self.assertEqual(self.calc.power(2, 3), 8)
+        self.assertEqual(self.calc.power(5, 0), 1)
+        self.assertEqual(self.calc.power(3, 2), 9)
+        self.assertEqual(self.calc.power(-2, 3), -8)
 
 if __name__ == "__main__":
     unittest.main()
