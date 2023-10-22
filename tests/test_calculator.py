@@ -37,6 +37,5 @@ class TestCalculator(unittest.TestCase):
             self.calc.modulus(1, 0)
 
 
-
 if __name__ == "__main__":
     unittest.main()
