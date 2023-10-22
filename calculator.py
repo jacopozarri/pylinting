@@ -28,7 +28,12 @@ class Calculator:
 
     def square_root(self, a):
         if a < 0:
-            raise ValueError(
-                "Cannot calculate the square root of a negative number"
-                )
+            raise ValueError("Cannot calculate the square root of a negative number")
         return a**0.5
+
+    def factorial(self, n):
+        if n < 0:
+            raise ValueError("Factorial is not defined for negative numbers")
+        if n == 0:
+            return 1
+        return n * self.factorial(n - 1)
