@@ -25,3 +25,10 @@ class Calculator:
         if b == 0:
             raise ValueError("Cannot divide by zero")
         return a // b
+
+    def square_root(self, a):
+        if a < 0:
+            raise ValueError(
+                "Cannot calculate the square root of a negative number"
+                )
+        return a**0.5
